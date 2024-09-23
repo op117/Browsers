@@ -76,5 +76,32 @@ function visitBakery() {
 }
 
 visitGreengrocer(); // ?.
+/*
+=== Greengrocer ===
+You bought:  [ '2 apples', '2 tomatoes', '1 cauliflower' ]
+This took: 0.00ms
+
+greenGrocer( ) is executed synchronously.
+buyApples, buyTomatoes, buyCauliflower are called sequentially.
+*/
+
 visitBakery(); // ?.
+/*
+=== Bakery ===
+We'll call you back!
+
+--- Callback from Bakery ---
+You bought: 1 fijn volkoren
+This took: 1004.00ms
+
+bakery( ) is asynchronous and runs with a 1 second delay
+*/
+
 visitCheeseShop(); // ?.
+/*
+=== Cheese Shop ===
+You bought: 500gr belegen cheese
+This took: 100.00ms
+
+cutCheese( ) delays 100ms before completing the purchase
+*/
